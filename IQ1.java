@@ -15,6 +15,8 @@ import java.util.NoSuchElementException;
  * *********************************************
  * *****************ABSTRACT*********************
  * **********************************************
+ * A queue which is immutable.It is persistent in such a way that whenever an enqueue/dequeue operation is performed , 
+ * unnecessary copying is not made.. 
  * 
  * This Programm is executing in << LESS THAN |_O(n/2)_| Amortized Time Complexity IN WORST CASES of Enqueue() operation>>
  *                             and <<O(1) Time Complexity >>for each  <<dequeue(), size() and peek() operations...IN ALL CASES>>
