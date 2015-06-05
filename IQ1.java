@@ -319,33 +319,36 @@ class List<E>{
 
 /*************************************************************************************************************************
  *******************************************************************************
- *<< YOU_MAY_REFER_TO_COMPLEXITY.pdf_SCANNED_PAPER_DESCRIBING_PROPERLY_THE_TIME_COMPLEXITY_CALCULATIONS>>
- *
- * Initially q1=initial Queue Object ,created after enQueuing q which does not contain any element..
- * 
- * Suppose after m-1 enqueue Operations in O(1) <<on newly Objets Formed and those are assinged back to q1>> ,
- *     mth enqueue operation is Performed on q2.
- * 
- * Now, if q1 is Enqueued again(<<BECOMING_THE_WORST_CASE>>)
- *         Then, all THe Elements of q1 will be copied into new Object Formed i.e. q3 ,
- *           requiring m-1 copy operations and 1 operation for enqueuing new element.
- *                    
- *       Now,if above is performed n-m times i.e. q1 IS ENQUEUED n-m TIMES..afer it has m elements 
- *            
- *      the <<Total number of Copy_OR_ENQUEUE Operations=m+(n-m)(m) >>   
- *              Total number of Elements Enqueued=n
- *      So,  number of Amortized Operations=(m+(n-m)(m))/(n)
- *                                                  
- *                                                  =(m+nm-m^2)/(n)
- * 
- *             Now,Above Term Will Always Be Less Than m<<(FOR PROOF REFER COMPLEXITY.pdf)>>
- * 
- *          So,Time_Complexity will always be less Than O(m),
- *                where m=length of Main Queue <<For MORE CLEARITY ON **length of Main Queue** Refer COMPLEXITY.pdf>>  
- *                
+ * << TIME COMPLEXITY PROOF >>
+*
+* Initially q1=initial Queue Object ,created after enQueuing q which does not contain any element..
+*
+* Suppose after m-1 enqueue Operations in O(1) <<on newly Objets Formed and those are assinged back to q1>> ,
+* mth enqueue operation is Performed and new object is as q2.
+*
+* Now, if q1 is Enqueued again(<<BECOMING_THE_WORST_CASE>>)
+* Then, all The Elements of q1 will be copied into new Object Formed i.e. q3 ,
+* requiring m-1 copy operations and 1 operation for enqueuing new element.
+*
+* Now,if above is performed n-m times i.e. q1 IS ENQUEUED n-m TIMES..afer it has m elements
+*
+* the <<Total number of Copy_OR_ENQUEUE Operations=m+(n-m)(m) >>
+* Total number of Elements Enqueued=n
+* In this total no. of objects created are :: q1,q2,q3,q4...,q(n-m+1) i.e. n-m+1 objects all containing m elements
+* Now if dequeue(),peek(),size() operations are performed on every object m times in order::
+* ON each object peek() is called first
+* size() is called next
+* dequeue() is called last ... and so on uptill new object becomes null
+* So, total time complexity of above 3 operations will be m+m+m=3*m
+* and time cost for creating original object = m
+* so Net time cost= 4*m
+* So,AMORTIZED TIME COST PER OBJECT= 4*m/m=4 ,which is O(4)~O(1);
+* WE DEDUCT FROM THE FACT THAT EVEN THE OBJECT CREATED IN WORST CASE OF
+* COPY OPERATION WILL HAVE SAME AMOUNT OF ELEMENTS AS THAT OF THE TIME TAKEN TO COPY AND
+* HENCE O(1) AMORTIZED COST...!!! :)
  ********************************************************************************************************************         
  *                
- *                    <<**FOR_MORE_CLEARITY_ON_ABOVE_BLA_BLA_REFER_TO_COMPLEXITY.pdf**>>
+ *                    
  *
  *
  *
