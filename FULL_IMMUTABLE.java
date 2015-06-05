@@ -332,7 +332,7 @@ class List<E>{
  *            
  *      the <<Total number of Copy_OR_ENQUEUE Operations=m+(n-m)(m) >>   
  *              Total number of Elements Enqueued=n
- * In this total no. of objects created are :: q1,q2,q3,q4...,q(n-m) i.e. n-m objects all containing m elements
+ * In this total no. of objects created are :: q1,q2,q3,q4...,q(n-m+1) i.e. n-m+1 objects all containing m elements
  *      Now if dequeue(),peek(),size() operations are performed on every object m times in order::
  *       ON each object  peek() is called first
  *                       size() is called next
