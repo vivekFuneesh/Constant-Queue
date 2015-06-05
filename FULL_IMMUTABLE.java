@@ -314,9 +314,10 @@ class List<E>{
     List next=null;/***<<Reference to next Node>>**/
 }
 
-/*************************************************************************************************************************
+/**
+ ************************************************************************************************************************
  *******************************************************************************
- *<< YOU_MAY_REFER_TO_COMPLEXITY.pdf_SCANNED_PAPER_DESCRIBING_PROPERLY_THE_TIME_COMPLEXITY_CALCULATIONS>>
+ *                       << TIME COMPLEXITY PROOF >>
  *
  * Initially q1=initial Queue Object ,created after enQueuing q which does not contain any element..
  * 
