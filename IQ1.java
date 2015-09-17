@@ -18,18 +18,17 @@ import java.util.NoSuchElementException;
  * A queue which is immutable.It is persistent in such a way that whenever an enqueue/dequeue operation is performed , 
  * unnecessary copying is not made.. 
  * 
- * This Programm is executing in << LESS THAN |_O(n/2)_| Amortized Time Complexity IN WORST CASES of Enqueue() operation>>
- *                             and <<O(1) Time Complexity >>for each  <<dequeue(), size() and peek() operations...IN ALL CASES>>
+ *  This Programm is executing in << O(1) Amortized Time Complexity For All Operations of Enqueue(),dequeue(), size() and peek() operations>>
+ *                              
  *         
  * 
- * 
+ * << NOTE::::: >>
  *<< This Programm IS GIVING A FIXED TIME COMPLEXITY.....for dequeue,peek,and size operations>>
  * 
  * *********--------------******
  * *********IMPORTANT--NOTE******
  * *********--------------******
- * 
- *        i.e. ****!!!!!!!!!!!!!!****
+ *      i.e. ****!!!!!!!!!!!!!!****
  *     !!!!!!!!** Developer:Vivek Mangla **!!!!!!!!!!
  *             ****!!!!!!!!!!!!!!!***>>There could be other programms also which are more fast.
  * *********--------------******
@@ -144,7 +143,8 @@ public class IQ1<E>{
     /************************<****************************************************************>************
      * <<TIME_COMPLEXITY>>
      *              <1.>..<Best Case::>  O(1)
-     *              <2.>..<Worst Case::> Less Than |_O(n/2)_|<< WHERE, n IS no. of elements enqueued>> 
+     *              <2.>..<Worst Case::> Less Than |_O(n/2)_|<< WHERE, n IS no. of elements enqueued>> ::****THIS IS LITTLE BIT DIFFICULT FOR ME TO PUT HERE ,IF YOU WANT TO UNDERSTAND IT COMPLETELY THEN E-MAIL ME*****
+     *              
      * <<****FOR CALCULATION OF TIME COMPLEXITY SEE END OF THIS PROGRAMM****>>
      ***************************<***********************************************************>****************
      */
@@ -335,15 +335,12 @@ class List<E>{
 * the <<Total number of Copy_OR_ENQUEUE Operations=m+(n-m)(m) >>
 * Total number of Elements Enqueued=n
 * In this total no. of objects created are :: q1,q2,q3,q4...,q(n-m+1) i.e. n-m+1 objects all containing m elements
-* Now if dequeue(),peek(),size() operations are performed on every object m times in order::
-* ON each object peek() is called first
-* size() is called next
-* dequeue() is called last ... and so on uptill new object becomes null
-* So, total time complexity of above 3 operations will be m+m+m=3*m
+* Now if dequeue(),peek(),size() operations are performed on every object m times 
+* So, total time complexity of above 3 operations will be m+m+m=3*m,considering the worst case of all nodes of each object is being put under every operation
 * and time cost for creating original object = m
 * so Net time cost= 4*m
 * So,AMORTIZED TIME COST PER OBJECT= 4*m/m=4 ,which is O(4)~O(1);
-* WE DEDUCT FROM THE FACT THAT EVEN THE OBJECT CREATED IN WORST CASE OF
+* WE CAME_UP FROM THE FACT THAT EVEN THE OBJECT CREATED IN WORST CASE OF
 * COPY OPERATION WILL HAVE SAME AMOUNT OF ELEMENTS AS THAT OF THE TIME TAKEN TO COPY AND
 * HENCE O(1) AMORTIZED COST...!!! :)
  ********************************************************************************************************************         
@@ -369,7 +366,7 @@ class List<E>{
               ********************************
  *
  *
- *
+ *tO uNDERSTAND tHE wORST cASE tIME cOMPLEXITY oF eNQUEUE oPERATION , e-MAIL mE.
  *
  *
  *
