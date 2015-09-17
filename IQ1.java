@@ -143,7 +143,7 @@ public class IQ1<E>{
     /************************<****************************************************************>************
      * <<TIME_COMPLEXITY>>
      *              <1.>..<Best Case::>  O(1)
-     *              <2.>..<Worst Case::> Less Than |_O(n/2)_|<< WHERE, n IS no. of elements enqueued>> ::****THIS IS LITTLE BIT DIFFICULT FOR ME TO PUT HERE ,IF YOU WANT TO UNDERSTAND IT COMPLETELY THEN E-MAIL ME*****
+     *              <2.>..<Worst Case::> Less Than |_O(n)_| :: WHERE n IS no. of elements enqueued>> 
      *              
      * <<****FOR CALCULATION OF TIME COMPLEXITY SEE END OF THIS PROGRAMM****>>
      ***************************<***********************************************************>****************
@@ -365,8 +365,6 @@ class List<E>{
               *
               ********************************
  *
- *
- *tO uNDERSTAND tHE wORST cASE tIME cOMPLEXITY oF eNQUEUE oPERATION , e-MAIL mE.
  *
  *
  *
