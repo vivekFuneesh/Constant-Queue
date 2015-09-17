@@ -144,8 +144,8 @@ public class FULL_IMMUTABLE<E>{
      ***********************<****************************************************************>************
      * <<TIME_COMPLEXITY>>
      *              <1.>..<Best Case::>  O(1)
-     *              <2.>..<Worst Case::> O(n) << WHERE, n IS no. of elements in the object just  enqueued>>
-     *              <3.>..<Amortized Time Complexity> << O(1) >>
+     *              <2.>..<Worst Case::> O(n) << WHERE, n IS no. of elements in the object **** in this new Object **** >>
+     *           
      * <<****FOR CALCULATION OF TIME COMPLEXITY SEE END OF THIS PROGRAMM****>>
      ***************************<***********************************************************>****************
      */
