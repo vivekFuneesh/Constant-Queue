@@ -337,6 +337,7 @@ class List<E>{
  *       ON each object  peek() is called first
  *                       size() is called next
  *                       dequeue() is called last ... and so on uptill new object becomes null
+ * NOTE:: ABOVE SEQUENCE WILL TAKE MAXIMUM OPERATIONS TO BE PERFORMED ON ANY INTERMIDIATE QUEUE.
  *            So, total time complexity of above 3 operations  will be m+m+m=3*m
  *                and time cost for creating original object = m
  *               so Net time cost= 4*m
