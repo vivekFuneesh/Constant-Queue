@@ -6,7 +6,3 @@ A queue which is immutable.It is persistent in such a way that whenever an enque
 copying is not made..
 
 
-For Complexity Proof go to::
-https://sourceforge.net/projects/constantqueue/files/
-
-and download file Complexity.zip
